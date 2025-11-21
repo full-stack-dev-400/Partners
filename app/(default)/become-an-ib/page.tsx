@@ -1,3 +1,6 @@
+export const dynamic = "force-dynamic";
+
+
 import BecomeAnIntroducer from "@/components/Become an Introducer/Become an Introducer";
 import NetworkIntro from "@/components/Become an Introducer/NetworkIntro";
 import CellXpertShowcase from "@/components/Become an Introducer/CellXpertShowcase";

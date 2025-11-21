@@ -1,3 +1,7 @@
+export const dynamic = "force-dynamic";
+
+
+
 // app/loyalty-programme/page.tsx
 import type { Metadata } from "next";
 
@@ -7,7 +11,7 @@ import LoyaltyProgramme from "@/components/LoyaltyProgramme/LoyaltyProgramme";
 import LoyaltyGrowEarnings from "@/components/LoyaltyProgramme/LoyaltyGrowEarnings";
 import LoyaltyPerks from "@/components/LoyaltyProgramme/LoyaltyPerks";
 import LoyaltyFAQ from "@/components/LoyaltyProgramme/LoyaltyFAQ";
-import RewardsForm from "@/components/RewardsForm";
+
 import RegisterForm from "@/components/RegisterForm";
 
 

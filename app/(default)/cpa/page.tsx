@@ -1,3 +1,6 @@
+export const dynamic = "force-dynamic";
+
+
 import CpaAffiliate from "@/components/cpa/CpaHero"; 
 import CPAProgramSchedule from "@/components/cpa/CPAProgramSchedule";
 import CpaNetworkIntro from "@/components/cpa/CpaNetworkIntro";

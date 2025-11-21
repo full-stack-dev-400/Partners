@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 
 import PammHero from "@/components/pamm/PammHero";
 import PammIntro from "@/components/pamm/PammIntro";
