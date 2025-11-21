@@ -159,13 +159,13 @@
 /* style.css */
 
 /* If Cirka is local, declare it once globally */
-@font-face {
+/* @font-face {
   font-family: "Cirka";
   src: url("/fonts/Cirka-SemiBold.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
-}
+} */
 
 @layer components {
   .heroHeading {

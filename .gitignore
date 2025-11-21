@@ -30,6 +30,8 @@ yarn-error.log*
 # npm lock file
 package-lock.json
 
+.env.local
+
 # local env files
 .env*.local
 

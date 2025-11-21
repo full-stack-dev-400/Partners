@@ -260,26 +260,26 @@ export default function RegisterForm({
       body: emailBody,
     };
 
-    fetch("http://118.139.165.198:5002/api/Stonefort/send-email", {
-      method: "POST",
-      headers: {
-        Accept: "*/*",
-        "Content-Type": "application/json",
-        "X-Api-Key": "stonefortkey2025",
-      },
-      body: JSON.stringify(apiBody),
-    })
-      .then(async (res) => {
-        if (!res.ok) {
-          const text = await res.text();
-          throw new Error(`Email API failed: ${text}`);
-        }
-        alert("✅ Email sent successfully!");
-      })
-      .catch((err) => {
-        console.error("❌ Email API error:", err);
-        alert("Something went wrong while sending the email.");
-      });
+    fetch("/api/send-email", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify(apiBody),
+})
+  .then(async (res) => {
+    if (!res.ok) {
+      const data = await res.json().catch(() => null);
+      const msg = data?.error || "Email failed";
+      throw new Error(msg);
+    }
+
+    alert("✅ Email sent successfully!");
+  })
+  .catch((err) => {
+    console.error("❌ Email API error:", err);
+    alert("Something went wrong while sending the email.");
+  });
 
     alert("Form submitted. Check console for payload.");
   });
