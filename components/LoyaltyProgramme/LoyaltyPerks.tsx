@@ -84,7 +84,7 @@ const MORE_PERKS: Perk[] = [
   {
     title: "Luxe\nExperiences",
     text: "Indulge in bespoke\nluxury experiences.",
-    img: "/images/car.png",
+    img: "/images/Car.png",
     imgMobile: "/images/carmbl.webp",
     imgClass: "scale-160 translate-x-0 translate-y-0",
   },
