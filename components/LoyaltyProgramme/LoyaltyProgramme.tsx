@@ -10,13 +10,15 @@ export default function LoyaltyHeroWithIntro() {
 <section className="relative bg-black text-slate-100 overflow-hidden">
   {/* FULL-WIDTH RIGHT IMAGE */}
   <div className="absolute inset-0 right-0 w-full">
+
     <Image
-      src="/images/loyalty-hero.webp"
+      src="/images/loyaltyBanner.webp"
       alt=""
       fill
       priority
       className="object-cover object-right"
     />
+
     <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent" />
   </div>
 
