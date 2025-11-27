@@ -45,10 +45,10 @@
   margin-bottom: 14px;
 }
 .logo{
-  width: 120px;
-  height: 120px;
+  width: 320px;
+  height: 320px;
   object-fit: contain;
-  filter: drop-shadow(0 12px 28px rgba(0,211,198,.18));
+  
 }
 
 /* heading (serif, large) */

@@ -9,7 +9,7 @@ import Hero from "@/components/home/Hero";
 import StatsStrip from "@/components/home/StatsStrip";
 import WhyPartner from "@/components/home/WhyPartner";
 import Programs from "@/components/home/Programs";
-import TestimonialSlider from "@/components/home/TestimonialSlider";
+// import TestimonialSlider from "@/components/home/TestimonialSlider";
 import Insights from "@/components/home/Insights";
 import Faq from "@/components/home/Faq";
 import JoinCta from "@/components/home/JoinCta";
@@ -28,7 +28,7 @@ export default function Home() {
        <StatsStrip />
        <WhyPartner />
        <Programs />
-        <TestimonialSlider trustpilotSrc="/images/trustpilot.gif" autoPlayMs={6000} />
+        {/* <TestimonialSlider trustpilotSrc="/images/trustpilot.gif" autoPlayMs={6000} /> */}
         <Insights />
         <Faq />
         <JoinCta

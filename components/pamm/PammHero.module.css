@@ -85,7 +85,7 @@
   padding: clamp(24px, 4vw, 55px);
   text-align: center;
 
-  width: min(900px, 100%);
+  width: min(1100px, 100%);
   margin: -140px auto 0;   /* KEEP as you want */
   position: relative;       /* REQUIRED for z-index */
   z-index: 10;              /* MAKES IT ABOVE BG */
