@@ -78,13 +78,15 @@ export default function CpaAffiliate() {
         {/* ===== Right Card Side ===== */}
         <div className={styles.card}>
           <div className={styles.cardImage}>
+
             <Image
-              src="/images/CpaHero.webp"
+              src="/images/cpahero.webp"
               alt="affiliate banner"
               fill
               className={styles.bannerImg}
               priority
             />
+            
           </div>
 
           <div className={styles.cardBody}>
