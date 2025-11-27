@@ -46,6 +46,21 @@ export default function TrustedBroker({
             <p className={styles.caption}>{awardText}</p>
           </div>
 
+                    {/* Divider */}
+          <div className={styles.divider} aria-hidden="true" />
+
+          {/* ⭐ NEW CELL — Top 100 Broker */}
+          <div className={styles.cell}>
+            <Image
+              src={awardSrc}
+              alt="Top 100 Broker"
+              width={76}
+              height={76}
+              className={styles.icon}
+            />
+            <p className={styles.caption}>Top 100 Broker</p>
+          </div>
+
           {/* Divider */}
           <div className={styles.divider} aria-hidden="true" />
 
@@ -69,20 +84,7 @@ export default function TrustedBroker({
             <p className={styles.caption}>{tradersNote}</p>
           </div>
 
-          {/* Divider */}
-          <div className={styles.divider} aria-hidden="true" />
 
-          {/* ⭐ NEW CELL — Top 100 Broker */}
-          <div className={styles.cell}>
-            <Image
-              src={awardSrc}
-              alt="Top 100 Broker"
-              width={76}
-              height={76}
-              className={styles.icon}
-            />
-            <p className={styles.caption}>Top 100 Broker</p>
-          </div>
         </div>
       </div>
     </section>

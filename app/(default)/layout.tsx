@@ -8,6 +8,8 @@ import 'aos/dist/aos.css'
 import Header from '@/components/ui/header'
 import Footer from '@/components/ui/footer'
 
+import WhatsAppWidget from "@/components/WhatsAppWidget";
+
 export default function DefaultLayout({
   children,
 }: {
@@ -34,6 +36,8 @@ export default function DefaultLayout({
       </main>
 
       <Footer />
+
+      <WhatsAppWidget />
     </>
   )
 }

@@ -78,8 +78,10 @@
 
 /* ===== White Card ===== */
 .card {
-  background: #fff;
-  color: #0b1220;
+  /* background: #fff; */
+      background-image: linear-gradient(90deg, #0c1219 0%, #1a2430 35%, #1e2a36 65%, #0c1219 100%);
+  /* color: #0b1220; */
+  color: #fff;
   border-radius: 22px;
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
   padding: clamp(24px, 4vw, 55px);
