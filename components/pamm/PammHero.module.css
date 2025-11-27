@@ -82,17 +82,22 @@
       background-image: linear-gradient(90deg, #0c1219 0%, #1a2430 35%, #1e2a36 65%, #0c1219 100%);
   /* color: #0b1220; */
   color: #fff;
-  border-radius: 22px;
+  /* border-radius: 22px; */
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
   padding: clamp(24px, 4vw, 55px);
   text-align: center;
 
-  width: min(1100px, 100%);
+  /* width: min(1100px, 100%); */
+  width: 100%;
   margin: -140px auto 0;   /* KEEP as you want */
   position: relative;       /* REQUIRED for z-index */
   z-index: 10;              /* MAKES IT ABOVE BG */
 }
 
+.content {
+  max-width: 1100px;
+  margin: 0 auto;
+}
 
 /* ===== Card text ===== */
 .cardTitle {

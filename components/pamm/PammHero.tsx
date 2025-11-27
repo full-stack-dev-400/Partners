@@ -29,9 +29,12 @@ export default function PammHero() {
           </div>
         </div>
 
-        {/* ===== White card below hero ===== */}
+
+      </div>
+              {/* ===== White card below hero ===== */}
         <div className={styles.card}>
-          <h2 className={styles.cardTitle}>
+          <div className={styles.content}>
+            <h2 className={styles.cardTitle}>
             Experience Professional Portfolio Growth with Stonefort{" "}
            P<span className={styles.teal}>A</span>MM
           </h2>
@@ -40,8 +43,9 @@ export default function PammHero() {
             (Percentage Allocation Management Module). Enjoy transparent profit sharing,
             risk diversification, and full control over your investments.
           </p>
+          </div>
+          
         </div>
-      </div>
     </section>
   );
 }
