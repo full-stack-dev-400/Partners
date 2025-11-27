@@ -7,6 +7,7 @@
   overflow: hidden;
 }
 
+
 /* subtle diagonal wedge at the bottom (like your mock) */
 .wrap::after {
   content: "";
@@ -19,7 +20,10 @@
   clip-path: polygon(50% 0, 100% 100%, 0% 100%);
 }
 
-  
+
+ 
+
+
 
 
 .inner {
@@ -27,6 +31,7 @@
   margin: 0 auto;
   text-align: center;
 }
+
 
 /* Headings */
 .title {
@@ -38,12 +43,14 @@
   letter-spacing: 0.2px;
 }
 
+
 .subtitle {
   margin: 0 auto;
   color: #000;
   font-size: clamp(16px, 1.6vw, 20px);
   max-width: 820px;
 }
+
 
 /* Grid */
 .grid3 {
@@ -55,6 +62,7 @@
   gap: 34px;
   align-items: start;
 }
+
 
 /* Card */
 .card {
@@ -73,11 +81,13 @@
   background: #d8f8f4;             /* soft teal tile */
 }
 
+
 .cardTitle {
   margin: 0 0 6px;
   font-size: 24px;
   font-weight: 500;
 }
+
 
 .cardText {
   margin: 0;
@@ -86,6 +96,7 @@
   line-height: 1.4;
   max-width: 320px;
 }
+
 
 /* Responsive */
 @media (max-width: 960px) {
@@ -99,10 +110,12 @@
   }
 }
 
+
 @media (max-width: 768px) {
   .wrap {
     padding: 48px 0 80px; /* slightly tighter spacing for mobile */
   }
+
 
   .wrap::after {
     height: 40px; /* smaller triangle on mobile */

@@ -34,7 +34,7 @@ const QA_ITEMS: QA[] = [
 ];
 
 export default function PammFaq() {
-     const [open, setOpen] = useState<number>(0);
+     const [open, setOpen] = useState<number>(-1);
 
   return (
     <section className={styles.section} aria-labelledby="faq-heading">

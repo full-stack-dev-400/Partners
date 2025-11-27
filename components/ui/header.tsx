@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation"; // 👈 add this
 import Logo from "./logo";
 import MobileMenu from "./mobile-menu";
 import TranslateWidget from "@/components/TranslateWidget";
@@ -10,19 +11,16 @@ import TranslateWidget from "@/components/TranslateWidget";
 export default function Header() {
   const [hidden, setHidden] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const pathname = usePathname(); // 👈 current URL
 
   useEffect(() => {
     const handleScroll = () => {
       const currentY = window.scrollY;
-
-      // Only start hiding after some scroll so it doesn't flicker at top
       const threshold = 80;
 
       if (currentY > lastScrollY && currentY > threshold) {
-        // scrolling down
         setHidden(true);
       } else {
-        // scrolling up
         setHidden(false);
       }
 
@@ -33,6 +31,13 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
+  // 🔹 Helper: check which main menu is active
+  const isHomeActive = ["/", "/become-an-ib", "/cpa", "/pamm"].includes(pathname);
+  const isLoyaltyActive = pathname.startsWith("/loyalty-programme");
+  const isAboutActive = pathname.startsWith("/about");
+
+  const activeColor = "#00d4c6";
+
   return (
     <header
       className={`sticky top-0 z-40 w-full text-white bg-black/95 backdrop-blur-sm transition-transform duration-300 ${
@@ -41,7 +46,7 @@ export default function Header() {
     >
       {/* ===== Top utility bar ===== */}
       <div className="bg-black">
-        <div className="mx-auto max-w-[1280px] px-6 lg:px-10">
+        <div className="w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
           <div className="flex h-14 items-center justify-end gap-6">
             <Link
               href="/contact"
@@ -60,20 +65,34 @@ export default function Header() {
 
       {/* ===== Bottom main bar ===== */}
       <div className="bg-black">
-        <div className="mx-auto max-w-[1280px] px-[15px] lg:px-0">
-          <div className="flex h-[120px] items-center">
-            <div className="shrink-0 scale-110">
+        <div className="w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
+          <div className="flex items-center py-4 md:py-5">
+            <div
+              className="
+                shrink-0
+                scale-[0.75]
+                sm:scale-95
+                lg:scale-105
+              "
+            >
               <Logo />
             </div>
 
             <div className="flex-1" />
+
             <nav className="hidden lg:block">
               <ul className="flex items-center gap-[56px]">
                 {/* Home + dropdown */}
                 <li className="relative group">
                   <Link
                     href="/"
-                    className="inline-flex items-center gap-2 text-[18px] leading-none font-normal tracking-[0.2px] hover:text-teal-300 transition-colors"
+                    className={`inline-flex items-center gap-2 text-[18px] leading-none font-normal tracking-[0.2px] transition-colors
+                      ${
+                        isHomeActive
+                          ? "text-[##00d4c6]"
+                          : "text-white hover:text-teal-300"
+                      }
+                    `}
                   >
                     Home
                     <svg
@@ -94,70 +113,98 @@ export default function Header() {
                   </Link>
 
                   {/* Dropdown */}
-<div
-  className="
-    absolute left-1/2 top-full -translate-x-1/2 z-50 mt-3
-    invisible opacity-0 translate-y-1 transition
-    group-hover:visible group-hover:opacity-100 group-hover:translate-y-0
-    pointer-events-none group-hover:pointer-events-auto
-    before:absolute before:inset-x-0 before:-top-3 before:h-3 before:content-['']
-  "
->
-  <div className="w-[380px] rounded-md bg-white py-2 text-black shadow-2xl">
-    <Link
-      href="/become-an-ib"
-      className="
-        block px-6 py-4 text-[18px] font-normal transition-colors
-        group-hover:bg-teal-400 group-hover:text-white
-        hover:bg-teal-400 hover:text-white
-      "
-    >
-      Become an Introducer (IB)
-    </Link>
+                  <div
+                    className="
+                      absolute left-1/2 top-full -translate-x-1/2 z-50 mt-3
+                      invisible opacity-0 translate-y-1 transition
+                      group-hover:visible group-hover:opacity-100 group-hover:translate-y-0
+                      pointer-events-none group-hover:pointer-events-auto
+                      before:absolute before:inset-x-0 before:-top-3 before:h-3 before:content-['']
+                    "
+                  >
+                    <div className="w-[380px] rounded-md bg-white py-2 text-black shadow-2xl">
+                      {/* IB */}
+                      <Link
+                        href="/become-an-ib"
+                        className={`
+                          block px-6 py-4 text-[18px] font-normal transition-colors
+                          ${
+                            pathname === "/become-an-ib"
+                              ? "bg-[#00d4c6] text-white"
+                              : "hover:bg-[#00d4c6] hover:text-white"
+                          }
+                        `}
+                      >
+                        Become an Introducer (IB)
+                      </Link>
 
-    <Link
-      href="/cpa"
-      className="
-        block px-6 py-4 text-[18px] font-normal transition-colors
-        hover:bg-teal-400 hover:text-white
-      "
-    >
-      Become a CPA Affiliate
-    </Link>
+                      {/* CPA */}
+                      <Link
+                        href="/cpa"
+                        className={`
+                          block px-6 py-4 text-[18px] font-normal transition-colors
+                          ${
+                            pathname === "/cpa"
+                              ? "bg-[#00d4c6] text-white"
+                              : "hover:bg-[#00d4c6] hover:text-white"
+                          }
+                        `}
+                      >
+                        Become a CPA Affiliate
+                      </Link>
 
-    <Link
-      href="/pamm"
-      className="
-        block px-6 py-4 text-[18px] font-normal transition-colors
-        hover:bg-teal-400 hover:text-white
-      "
-    >
-      Become a Money Manager (PAMM)
-    </Link>
-  </div>
-</div>
-
+                      {/* PAMM */}
+                      <Link
+                        href="/pamm"
+                        className={`
+                          block px-6 py-4 text-[18px] font-normal transition-colors
+                          ${
+                            pathname === "/pamm"
+                              ? "bg-[#00d4c6] text-white"
+                              : "hover:bg-[#00d4c6] hover:text-white"
+                          }
+                        `}
+                      >
+                        Become a Money Manager (PAMM)
+                      </Link>
+                    </div>
+                  </div>
                 </li>
 
+                {/* Loyalty Programme */}
                 <li>
                   <Link
                     href="/loyalty-programme"
-                    className="text-[18px] leading-none font-normal tracking-[0.2px] hover:text-teal-300 transition-colors"
+                    className={`text-[18px] leading-none font-normal tracking-[0.2px] transition-colors
+                      ${
+                        isLoyaltyActive
+                          ? "text-[#00d4c6]"
+                          : "text-white hover:text-teal-300"
+                      }
+                    `}
                   >
                     Loyalty Programme
                   </Link>
                 </li>
 
+                {/* About Us */}
                 <li>
                   <Link
                     href="/about"
-                    className="text-[18px] leading-none font-normal tracking-[0.2px] hover:text-teal-300 transition-colors"
+                    className={`text-[18px] leading-none font-normal tracking-[0.2px] transition-colors
+                      ${
+                        isAboutActive
+                          ? "text-[#00d4c6]"
+                          : "text-white hover:text-teal-300"
+                      }
+                    `}
                   >
                     About Us
                   </Link>
                 </li>
               </ul>
             </nav>
+
             <div className="flex-1" />
 
             <div className="lg:hidden ml-auto">

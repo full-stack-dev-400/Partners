@@ -18,7 +18,7 @@ export default function Programs() {
       title:
         "Trade More.\n Earn More.",
       body:
-        "Start as a Silver IB and grow your way to Platinum with unbeatable rebates on Forex, Commodities, Indices & Crypto. The more you bring, the more you earn – it’s that simple.",
+        "Start as a Silver IB and grow your way to Platinum with unbeatable rebates on Forex, Commodities, Indices & Crypto. The more you bring, the more you earn it’s that simple.",
       ctaHref: "https://clients-mu-stonefortsecurities.com/#/register",
       learnHref: "/become-an-ib",
     },

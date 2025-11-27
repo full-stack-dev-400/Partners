@@ -6,6 +6,8 @@
 }
 
 
+
+
 .title {
   font-family: "Cirka", serif;
   font-weight: 500;
@@ -15,9 +17,13 @@
 }
 
 
+
+
 .title span {
   color: #00d3c6;
 }
+
+
 
 
 .grid {
@@ -31,12 +37,16 @@
 }
 
 
+
+
 .left,
 .right {
   display: flex;
   flex-direction: column;
   gap: 28px;
 }
+
+
 
 
 .card {
@@ -54,16 +64,24 @@
 }
 
 
+
+
 .card:hover {
   border-color: rgba(0, 211, 198, 0.6);
   transform: translateY(-3px);
+  background: #fff;
+  color: #000;
 }
+
+
 
 
 .card p {
     text-align: start;
     max-width: 200px;
 }
+
+
 
 
 .logo {
@@ -75,11 +93,15 @@
 }
 
 
+
+
 .center {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
+
 
 
 /* Responsive */
@@ -90,14 +112,20 @@
   }
 
 
+
+
   .center {
     order: -1;
   }
 
 
+
+
   .card {
     font-size: 18px;
   }
+
+
 
 
   .title {

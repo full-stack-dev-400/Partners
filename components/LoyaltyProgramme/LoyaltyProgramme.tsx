@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 
-
 export default function LoyaltyHeroWithIntro() {
   return (
     <>
@@ -12,7 +11,7 @@ export default function LoyaltyHeroWithIntro() {
   {/* FULL-WIDTH RIGHT IMAGE */}
   <div className="absolute inset-0 right-0 w-full">
     <Image
-      src="/images/Loyalty-hero.webp"
+      src="/images/loyalty-hero.webp"
       alt=""
       fill
       priority
@@ -49,7 +48,7 @@ export default function LoyaltyHeroWithIntro() {
 
 
       <Link
-        href="/pammform"
+        href="#apply"
         className="inline-flex items-center rounded-full bg-[#00d3c6] px-6 py-3 text-base font-medium text-[#fff] hover:bg-[#fff] hover:text-[#0b1220]"
       >
         Express your Interest

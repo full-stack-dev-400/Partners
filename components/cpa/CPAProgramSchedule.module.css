@@ -10,6 +10,7 @@
     text-align: center;
 }
 
+
 .title {
     margin: 0 0 12px;
     line-height: 1.2;
@@ -79,4 +80,17 @@
 }
 .table tbody td:last-child {
   border-right: 0;
+}
+
+
+.noteWrap {
+  width: min(1200px, 92%);
+  margin: 14px auto 0;   /* same center alignment as table */
+}
+
+.tableNote {
+  font-size: 14px;
+  color: #00d3c6;
+  line-height: 1.6;
+  text-align: left;  /* or center if you prefer */
 }

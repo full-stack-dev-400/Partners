@@ -38,7 +38,7 @@ export default function WhyPartner() {
     {
       title: "Priority Partner Support",
       body:
-        "Receive 1-to-1 assistance to turn every opportunity into a success — our support team is with you at every step.",
+        "Receive 1-to-1 assistance to turn every opportunity into a success our support team is with you at every step.",
       icon: "/images/email.png",
     },
     {

@@ -5,11 +5,13 @@
   padding: 72px 0 88px;
 }
 
+
 .inner {
   width: min(1150px, 92%);
   margin: 0 auto;
   text-align: center;
 }
+
 
 /* ===== Typography (as requested) ===== */
 /* Heading: Cirka Semibold 55px (fallbacks if not loaded) */
@@ -22,6 +24,7 @@
   margin: 0 0 10px;
 }
 
+
 /* Subheading: Poppins 20px regular */
 .subtitle {
   font-family: "Poppins", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
@@ -32,6 +35,7 @@
   margin: 0 auto 36px;
   color: #fff;                   /* light slate-teal for readability on black */
 }
+
 
 /* ===== Steps grid ===== */
 .grid3 {
@@ -44,11 +48,15 @@
   justify-items: center;
 }
 
+
 /* Step item */
 .step {
   position: relative;
   text-align: center;
 }
+
+
+
 
 
 
@@ -62,6 +70,7 @@
 }
 .icon { width: 59px; height: 95px; }
 
+
 /* Step title: Poppins 24px Semibold */
 .stepTitle {
   font-family: "Poppins", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto;
@@ -70,6 +79,7 @@
   margin: 8px 0 6px;
 }
 
+
 /* Step text: Poppins 16px regular */
 .stepText {
   font-family: "Poppins", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto;
@@ -77,20 +87,79 @@
   font-weight: 400;
   line-height: 1.45;
   color: #fff;
-  
+ 
   margin: 0 auto;
 }
 
-/* Dotted connectors between steps */
+
+/* ===== CONNECTORS BASE ===== */
 .connector {
   align-self: center;
   width: 100%;
-  height: 2px;
-  background-image: radial-gradient(#00d3c6 1px, transparent 1px);
-  background-size: 6px 1px;
-  background-repeat: repeat-x;
-  opacity: 2;
+  height: 3px;              /* thoda zyada visible */
+  position: relative;
+  overflow: hidden;
 }
+
+
+/* Common line style for both connectors */
+.connector::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0%;                /* start from 0 */
+
+
+  /* Zyada visible, bold dots */
+  background-image: radial-gradient(circle, #00fff2 2px, transparent 2px);
+  /* ya brand ke liye: radial-gradient(circle, #4D6E55 2px, transparent 2px); */
+  background-size: 14px 3px;
+  background-repeat: repeat-x;
+  opacity: 0;               /* start hidden */
+}
+
+
+/* ---------- FIRST CONNECTOR (between step 1 & 2) ---------- */
+.connector:nth-of-type(2)::before {
+  animation: connectorOne 5s linear infinite;
+}
+
+
+/* ---------- SECOND CONNECTOR (between step 2 & 3) ---------- */
+.connector:nth-of-type(4)::before {
+  animation: connectorTwo 5s linear infinite;
+}
+
+
+/* ===== KEYFRAMES ===== */
+
+
+/* Pehla connector: jaldi start, pehle khatam */
+@keyframes connectorOne {
+  0%   { width: 0%;   opacity: 0; }  /* hidden */
+  5%   { width: 0%;   opacity: 1; }  /* line start visible */
+  35%  { width: 100%; opacity: 1; }  /* fully drawn */
+  55%  { width: 100%; opacity: 1; }  /* thoda hold */
+  90%  { width: 100%; opacity: 0; }  /* start hiding */
+  100% { width: 0%;   opacity: 0; }  /* fully hidden, ready for next loop */
+}
+
+
+/* Dusra connector: pehle wait karega, baad me draw hoga */
+@keyframes connectorTwo {
+  0%   { width: 0%;   opacity: 0; }  /* hidden */
+  40%  { width: 0%;   opacity: 0; }  /* wait jab tak pehla chal raha hai */
+  45%  { width: 0%;   opacity: 1; }  /* ab start drawing */
+  75%  { width: 100%; opacity: 1; }  /* fully drawn */
+  85%  { width: 100%; opacity: 1; }  /* thoda hold */
+  90%  { width: 100%; opacity: 0; }  /* start hiding */
+  100% { width: 0%;   opacity: 0; }  /* fully hidden */
+}
+
+
+
 
 /* CTA */
 .ctaRow {
@@ -109,13 +178,14 @@
   box-shadow: 0 0 0 1px rgba(255,255,255,0.12) inset, 0 8px 28px rgba(0, 211, 198, 0.25);
   transition: transform .2s ease, opacity .2s ease;
 }
-.primaryBtn:hover { 
-  transform: translateY(-1px); 
+.primaryBtn:hover {
+  transform: translateY(-1px);
   opacity: .95;
   background: #fff;
   color: #00d3c6;
  }
  
+
 
 /* ===== Responsive ===== */
 @media (max-width: 1024px) {
@@ -124,7 +194,9 @@
   .grid3 { grid-template-columns: 1fr; row-gap: 26px; }
   .connector { display: none; }
 
+
 }
+
 
 @media (max-width: 640px) {
   .title { font-size: 36px; }

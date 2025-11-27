@@ -108,7 +108,7 @@ export default function CpaAffiliate() {
                   width={20}
                   height={20}
                 />
-                Range of Multi-Asset Trading Services
+                Range of Multi-Asset <br/>Trading Services
               </li>
               <li>
                 <Image

@@ -32,7 +32,7 @@ export default function Home() {
         <Insights />
         <Faq />
         <JoinCta
-        logoSrc="/images/stonefort-logo.gif"
+        logoSrc="/images/stonefort-logo.webm"
         primaryHref="https://clients-mu-stonefortsecurities.com/#/register"
         secondaryHref="/contact"
       />

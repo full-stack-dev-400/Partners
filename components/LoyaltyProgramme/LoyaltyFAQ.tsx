@@ -25,7 +25,7 @@ const QA_ITEMS: QA[] = [
 ];
 
 export default function LoyaltyFaq() {
-  const [open, setOpen] = useState<number>(0); // first open like home
+  const [open, setOpen] = useState<number>(-1); // first open like home
 
   return (
     <section className={styles.section} aria-labelledby="loyalty-faq-heading">

@@ -2,7 +2,7 @@
 .wrap {
   background: #000;
   color: #fff;
-  padding: 60px 0 100px;
+  padding: 60px 0 00px;
 }
 
 /* ===== Container ===== */
@@ -16,9 +16,10 @@
   position: relative;
   background: url("/images/PAMMbanner.webp") center top / cover no-repeat;
   border-radius: 14px;
-  padding: 100px 20px 270px;
+  padding: 100px 20px 270px; /* space for overlapping card */
   text-align: center;
   overflow: hidden;
+  z-index: 1;
 }
 
 /* ===== Breadcrumb ===== */
@@ -43,9 +44,11 @@
   color: #00d3c6;
   text-decoration: none;
 }
+
 .breadcrumb a:hover {
   text-decoration: underline;
 }
+
 .breadcrumb span {
   opacity: 0.7;
 }
@@ -54,18 +57,21 @@
 .center {
   margin-top: 50px;
 }
+
 .title {
   font-family: "Cirka", ui-serif, Georgia, "Times New Roman", serif;
   font-size: clamp(36px, 6vw, 80px);
   font-weight: 500;
-  margin: 0 0 0;
+  margin: 0;
   text-shadow: 0 4px 18px rgba(0, 0, 0, 0.5);
 }
+
 .tagline {
   font-family: "Poppins", sans-serif;
   font-size: clamp(14px, 2vw, 20px);
   opacity: 0.95;
 }
+
 .teal {
   color: #00d3c6;
 }
@@ -74,15 +80,19 @@
 .card {
   background: #fff;
   color: #0b1220;
-  position: absolute;
   border-radius: 22px;
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
   padding: clamp(24px, 4vw, 55px);
   text-align: center;
-  width: min(1200px, 100%);
-  margin: 0px auto 0; /* overlap effect */
+
+  width: min(900px, 100%);
+  margin: -140px auto 0;   /* KEEP as you want */
+  position: relative;       /* REQUIRED for z-index */
+  z-index: 10;              /* MAKES IT ABOVE BG */
 }
 
+
+/* ===== Card text ===== */
 .cardTitle {
   font-family: "Cirka", ui-serif, Georgia, "Times New Roman", serif;
   font-size: clamp(28px, 4vw, 55px);
@@ -90,23 +100,46 @@
   line-height: 1.1;
   margin: 0 0 12px;
 }
+
 .cardText {
   font-family: "Poppins", sans-serif;
   font-size: clamp(16px, 2vw, 20px);
   line-height: 1.4;
-  /* max-width: 950px; */
   margin: 0 auto;
 }
 
-/* ===== Responsive ===== */
+/* ===== Tablet ===== */
+@media (max-width: 1024px) {
+  .card {
+    max-width: 700px;
+  }
+}
+
+/* ===== Mobile / Tablet ===== */
 @media (max-width: 768px) {
   .bgBox {
-    padding: 80px 16px 120px;
-    
+    padding: 80px 16px 160px;
   }
+
   .card {
-    margin-top: -50px;
-    max-width: 383px ;
-    
+    max-width: 100%;
+    margin-top: -100px;
+  }
+}
+
+/* ===== Small Devices ===== */
+@media (max-width: 560px) {
+  .card {
+    margin-top: -60px;
+    margin-bottom: 50px;
+    padding: 28px 18px;
+  }
+
+  .title {
+    font-size: 38px;
+  }
+
+  .cardTitle {
+    font-size: 30px;
   }
 }

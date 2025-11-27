@@ -18,7 +18,9 @@ export default function CPAProgramSchedule() {
       </div>
 
       {/* ===== Schedule Table ===== */}
+      <div className="notes">
       <div className={styles.tableCard}>
+        
         <div className={styles.cardTitle} role="heading" aria-level={2}>
           CPA Program Schedule
         </div>
@@ -35,33 +37,42 @@ export default function CPAProgramSchedule() {
             <tbody>
               <tr>
                 <td>$50 – $250</td>
-                <td>40%</td>
-                <td>2 LOT</td>
+                <td>20%</td>
+                <td>4 LOTS (Minimum)</td>
               </tr>
               <tr>
                 <td>$251 – $500</td>
-                <td>40%</td>
-                <td>5 LOTS</td>
+                <td>20%</td>
+                <td>7 LOTS (Minimum)</td>
               </tr>
               <tr>
                 <td>$501 – $1500</td>
-                <td>40%</td>
-                <td>10 LOTS</td>
+                <td>20%</td>
+                <td>10 LOTS (Minimum)</td>
               </tr>
               <tr>
                 <td>$1501 – $2500</td>
-                <td>40%</td>
-                <td>13 LOTS</td>
+                <td>20%</td>
+                <td>13 LOTS (Minimum)</td>
               </tr>
               <tr>
                 <td>$2501 – $5000</td>
-                <td>40%</td>
-                <td>20 LOTS</td>
+                <td>20%</td>
+                <td>20 LOTS (Minimum)</td>
               </tr>
             </tbody>
           </table>
+          
         </div>
+        
+        </div>
+        <div className={styles.noteWrap}>
+          <p className={styles.tableNote}>
+            * TnC: – Eligible Instruments – FX, METALS & ENERGIES ONLY – Leverage : 1:500 – IMPORTANT : Maintain ROI of 2.5%
+          </p>
       </div>
+      </div>
+      
     </section>
   );
 }

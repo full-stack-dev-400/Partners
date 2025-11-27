@@ -7,14 +7,17 @@
   padding: 64px 0 40px;
 }
 
+
 .inner {
   width: min(1150px, 92%);
   margin: 0 auto;
 }
 
+
 /* =============================
    Grid with shared dividers
 ============================= */
+
 
 /* ===== Section Heading ===== */
 .heading {
@@ -27,9 +30,13 @@
   letter-spacing: -0.3px;
 }
 
+
 .heading span {
   color: #00d3c6; /* Stonefort teal */
 }
+
+
+
 
 
 
@@ -40,6 +47,7 @@
   gap: 0; /* we’ll control spacing inside .item */
   border-collapse: collapse;
 }
+
 
 /* horizontal divider between rows */
 .grid::before {
@@ -53,6 +61,7 @@
   transform: translateY(-0.5px);
 }
 
+
 /* vertical divider between columns */
 .grid::after {
   content: "";
@@ -65,6 +74,7 @@
   transform: translateX(-0.5px);
 }
 
+
 /* =============================
    Item (Card)
 ============================= */
@@ -73,6 +83,7 @@
   border-radius: 0; /* no rounding—keeps divider clean */
   transition: all 0.3s ease;
 }
+
 
 /* Hover: background flips white, text dark */
 .item:hover {
@@ -84,13 +95,16 @@
   box-shadow: 0 0 0 1px #000 inset; /* outline for hover */
 }
 
+
 .item:hover .h3 { color: #000; }
 .item:hover .text { color: #333; }
+
 
 .item:hover .tick {
   filter: drop-shadow(0 0 6px rgba(0, 211, 198, 0.45));
   transform: scale(1.05);
 }
+
 
 /* =============================
    Inner text styling
@@ -101,10 +115,12 @@
   gap: 10px;
 }
 
+
 .tick {
   width: 24px;
   height: 24px;
 }
+
 
 .h3 {
   margin: 0;
@@ -114,12 +130,14 @@
  
 }
 
+
 .text {
   margin-top: 8px;
   color: #fff;
   font-size: 18px;
   line-height: 1.5;
 }
+
 
 /* =============================
    Stage Image
@@ -130,12 +148,14 @@
   margin-top: 36px;
 }
 
+
 .stage img {
   width: 100%;
   height: auto;
   display: block;
   border-radius: 8px;
 }
+
 
 /* =============================
    Responsive

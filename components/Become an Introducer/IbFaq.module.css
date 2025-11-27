@@ -1,20 +1,24 @@
 /* ===== FAQ (dark, thin separators, + / – icon) ===== */
 
+
 .section{
   --bg:#000;
   --ink:#ffffff;
   --muted:#cfd9d9;
   --ring:rgba(255,255,255,.22);
 
+
   background: var(--bg);
   color: var(--ink);
   padding: clamp(48px, 8vw, 96px) 16px;
 }
 
+
 .container{
   max-width: 920px;
   margin: 0 auto;
 }
+
 
 /* Heading — serif like your design */
 .heading{
@@ -26,6 +30,7 @@
   margin: 0 0 clamp(20px, 4vw, 32px);
 }
 
+
 /* List frame */
 .list{
   list-style: none;
@@ -34,10 +39,12 @@
   border-top: 1px solid var(--ring);
 }
 
+
 /* Item with thin separators */
 .item{
   border-bottom: 1px solid var(--ring);
 }
+
 
 /* Trigger row */
 .trigger{
@@ -54,13 +61,15 @@
   cursor: pointer;
 }
 
+
 /* Question text */
 .question{
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: .2px;
   font-size: clamp(20px, 2.2vw, 24px);
   font-family: "Poppins", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto;
 }
+
 
 /* Plus / minus icon (pure CSS) */
 .icon{
@@ -84,6 +93,7 @@
   transform: translate(-50%, -50%) rotate(90deg);
 }
 
+
 /* Panel (animated open/close using grid-rows trick) */
 .panel{
   display: grid;
@@ -97,6 +107,7 @@
   overflow: hidden;
 }
 
+
 /* Answer text (content target ~20px) */
 .answer{
   margin: 0 0 14px;
@@ -107,6 +118,7 @@
     color: #ffffff;
   line-height: 1.6;
 }
+
 
 /* When item is open, turn + into – */
 .open .icon::after{

@@ -8,7 +8,7 @@ export default function NetworkIntro() {
     <section className={styles.wrap} aria-label="IB top benefits">
       <div className={styles.inner}>
         <h2 className={styles.title}>
-          Join <span className={styles.accent}>Stonefort</span>. Expand Your <span className={styles.accent}>Network</span>.<br />
+          Join <span className={styles.accent}>Stonefort</span>. Expand Your <span className={styles.accent}>Network</span>.
           Build Your Forex <span className={styles.accent}>Empire</span>.
         </h2>
         <p className={styles.subtitle}>

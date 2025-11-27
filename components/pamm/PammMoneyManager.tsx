@@ -8,7 +8,7 @@ export default function MoneyManager() {
   return (
     <section className={styles.wrap} aria-label="Get Started steps">
       <div className={styles.inner}>
-        <h2 className={styles.title}>How to become a money manager in 3 easy steps</h2>
+        <h2 className={styles.title}>How to become a <span className={styles.teal}>money manager</span><br/> in 3 easy steps</h2>
 
 
         <ol className={styles.grid3}>
@@ -70,7 +70,7 @@ export default function MoneyManager() {
 
         <div className={styles.ctaRow}>
         <a
-            href="https://clients-mu-stonefortsecurities.com/#/register"
+            href="/pammform"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.primaryBtn}

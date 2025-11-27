@@ -17,7 +17,7 @@ export default function CpaNetworkIntro(){
                             <Image src="/images/payout.svg" alt="Leading payouts" width={48} height={48}/>
                         </div>
                         <h3 className={styles.cardTitle}>Competitive CPA</h3>
-                        <p>Earn up to $2,000 per funded trader with Stonefort’s high-paying CPA program among the most rewarding in the forex industry.</p>
+                        <p>Earn up to $1,000 per funded trader with Stonefort’s high-paying CPA program among the most rewarding in the forex industry.</p>
                     </li>
 
                     <li className={styles.card}>

@@ -2,7 +2,7 @@
 .wrap {
   background: #000;
   color: #fff;
-  padding: 100px 0;
+  padding: 0px 0;
   text-align: center;
 }
 
@@ -10,7 +10,7 @@
 .inner {
   width: min(1200px, 90%);
   margin: 0 auto;
-  margin-top: 220px;
+  margin-top: 110px;
 }
 
 /* ===== Heading ===== */

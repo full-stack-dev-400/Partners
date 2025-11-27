@@ -6,7 +6,7 @@
 
 .inner {
   display: grid;
-  grid-template-columns: 1fr 420px;
+  grid-template-columns: 1fr 520px;
   gap: 60px;
   align-items: start;
   width: min(1200px, 90%);
@@ -80,7 +80,7 @@
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
   width: 501px;
   height: auto;
-  margin-top: 50px;
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
 }
@@ -221,7 +221,7 @@
   }
 
   .cardBody {
-    padding: 18px 20px 24px;
+    padding: 18px 0px 24px;
   }
 
   .cardHeader h3 {
