@@ -67,13 +67,14 @@ export default function Footer() {
         </div>
 
         {/* Trustpilot badge */}
-        <div className="flex justify-end">
+        <div className="flex flex-col items-end gap-1">
           <Image
             src="/images/trustpilot.png"
             alt="Trustpilot rating"
             width={240}
             height={28}
           />
+          <p className="text-sm">Trust Score 4.0</p>
         </div>
       </div>
 
