@@ -68,7 +68,7 @@ export default function Header() {
       {/* ===== Bottom main bar ===== */}
       <div className="bg-black">
         <div className="w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
-          <div className="flex items-center py-4 md:py-5">
+          <div className="flex items-center py-4 md:py-1">
             <div
               className="
                 shrink-0
