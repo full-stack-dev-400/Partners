@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { usePathname } from "next/navigation"; // 👈 add this
+import { usePathname } from "next/navigation"; 
 import Logo from "./logo";
 import MobileMenu from "./mobile-menu";
 import TranslateWidget from "@/components/TranslateWidget";
@@ -50,12 +50,14 @@ export default function Header() {
           <div className="flex h-14 items-center justify-end gap-6">
             <Link
               href="/contact"
-              className="text-[18px] font-normal tracking-[0.2px] hover:text-teal-300 transition-colors"
+              className="text-[14px] font-normal tracking-[0.2px] hover:text-teal-300 transition-colors"
             >
               Contact Us
             </Link>
 
-            <TranslateWidget />
+              <div className="scale-75 origin-right">
+    <TranslateWidget />
+  </div>
           </div>
         </div>
       </div>
