@@ -20,8 +20,15 @@
   display: grid;
   grid-template-columns: 1fr 520px;
   gap: 60px;
-  align-items: start;
+  align-items: stretch; 
 }
+
+/* .inner {
+  display: grid;
+  grid-template-columns: 1fr 520px;
+  gap: 60px;
+  align-items: stretch; 
+} */
 
 
 /* === Breadcrumb above both columns === */
@@ -85,7 +92,7 @@
 .features p {
   font-size: 18px;
   font-weight: 400;
-  max-width: 80%;
+  max-width: 100%;
   color: #fff;
   line-height: 1.5;
 }
@@ -98,9 +105,9 @@
   overflow: hidden;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
   width: 501px;
-  height: 473px;
+  height: 100%;
   display: flex;
-  margin-top: 30px;
+    margin-top: 25px;
   flex-direction: column;
 }
 
@@ -114,6 +121,9 @@
 
 .cardBody {
   padding: 20px 24px 28px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 
@@ -126,9 +136,9 @@
 
 
 .cardHeader h3 {
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 700;
-  line-height: 28px;
+  line-height: 34px;
   color: #000;
 }
 
@@ -138,11 +148,12 @@
   list-style: none;
   font-size: 15px;
   color: #000;
-  margin: 0 0 24px;
+  margin: 0 0 0;
   padding: 0;
   display: flex;
   flex-direction: column;
   gap: 12px;
+  flex-grow: 1;
 }
 
 
@@ -167,53 +178,52 @@
   align-items: center;
   gap: 12px;
   flex-wrap: nowrap;
-  margin-top: 24px;
+  margin-top: auto;
+  padding-top: 20px;
 }
-
 
 .primaryBtn,
 .secondaryBtn {
-  flex: 1 1 0;
+  flex: 1 1 0; /* equal width */
   text-align: center;
   white-space: nowrap;
 }
 
-
 .primaryBtn {
-  background: #000;
+  background: #00d3c6;
   color: #fff;
   padding: 14px 20px;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
   border-radius: 999px;
-  transition: opacity 0.2s ease, background 0.2s ease, color 0.2s ease;
+  transition: opacity 0.2s ease, background 0.2s ease, color 0.2s ease,
+    border-color 0.2s ease;
 }
-
 
 .primaryBtn:hover {
   opacity: 0.9;
-  background: #00d3c6;
-  color: #000;
+  background: #fff;
+  color: #00d3c6;
+  border: 1px solid #00d3c6;
 }
-
 
 .secondaryBtn {
   background: #fff;
-  border: 1px solid #000;
+  border: 1px solid #00d3c6;
   color: #000;
   font-size: 16px;
   font-weight: 600;
   padding: 14px 20px;
   border-radius: 999px;
-  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease,
+    border-color 0.2s ease;
 }
-
 
 .secondaryBtn:hover {
   background: #00d3c6;
+  border: 1px solid #fff;
   color: #fff;
 }
-
 
 /* ===== Responsive ===== */
 @media (max-width: 960px) {
@@ -244,7 +254,7 @@
     order: 1;
     width: 100%;
     height: auto;
-    margin-top: 20px;
+   
     background: #000;
     border-radius: 30px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
@@ -264,6 +274,7 @@
   .cardHeader h3 {
     font-size: 22px;
     line-height: 26px;
+
     color: #fff;
   }
 

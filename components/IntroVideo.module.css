@@ -1,0 +1,28 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  z-index: 9999;
+
+  /* PERFECT CENTERING */
+  display: flex;
+  justify-content: center;  /* center horizontally */
+  align-items: center;      /* center vertically */
+}
+
+.video {
+  width: 360px;      /* control width */
+  height: auto;      /* keep natural height ratio */
+  max-height: 80vh;  /* don’t let it go too tall */
+  object-fit: contain;
+}
+
+/* Fade out after video ends */
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}

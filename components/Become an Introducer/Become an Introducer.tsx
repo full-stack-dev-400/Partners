@@ -104,7 +104,7 @@ export default function BecomeAnIntroducer() {
                   width={20}
                   height={20}
                 />
-                <strong>$500M+</strong> monthly trading volume
+                <strong>$500M+</strong>monthly trading volume
               </li>
               <li>
                 <Image
@@ -113,7 +113,7 @@ export default function BecomeAnIntroducer() {
                   width={20}
                   height={20}
                 />
-                <strong>$200M+</strong> paid to partners
+                <strong>$200M+</strong>paid to partners
               </li>
               <li>
                 <Image

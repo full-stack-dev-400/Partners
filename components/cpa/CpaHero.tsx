@@ -92,7 +92,7 @@ export default function CpaAffiliate() {
           <div className={styles.cardBody}>
             <div className={styles.cardHeader}>
               <Image
-                src="/images/ib-logo.png" // 👉 replace with CPA logo if available
+                src="/images/ib-logo.png" 
                 alt="Stonefort icon"
                 width={34}
                 height={46}
